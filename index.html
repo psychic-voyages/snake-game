@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link rel='stylesheet' href='style.css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='app.js' defer></script>
+    </head>
+
+    <body>
+        <div id='main-container'>
+            <section id='game-info'>
+                <h1>Snake Game</h1>
+                <h3>
+                    Avoid the walls and yourself!
+                    The green apples increase your score and snake by one.
+                    The rest of the apples are a surprise! 
+                </h3>
+                <p>
+                    (controls: arrow keys move)
+                </p>
+            </section>
+            
+            <section id='game-container'>
+                <div id='game-board'>
+                    
+                </div>
+                
+                <div id='start-menu' class='game-menu'>
+                    <div class='menu-item'>
+                        <label>Cell Count: </label><br>
+                        <label id='cell-count-label' class='item-value'>22</label><br>
+                        <input id='cell-count-slider' type='range' value='22' min='16' max='32'>
+                    </div>
+
+                    <div class='menu-item'>
+                        <label>Snake Speed: </label><br>
+                        <label id='game-speed-label' class='item-value'>Ball Python</label><br>
+                        <input id='game-speed-slider' type='range' value='3' min='1' max='5'>
+                    </div>
+
+                    <div class='menu-item'>
+                        <label>Modifiers: </label><br>
+                        <input type='checkbox' id='use-constant'/>
+                        <label for='use-constant' class='item-value'>Constant Speed</label><br>
+
+                        <input type='checkbox' id='use-powerup'/>
+                        <label for='use-powerup' class='item-value'>Power-Ups</label><br>
+
+                        <input type='checkbox' id='use-nobound'/>
+                        <label for='use-nobound' class='item-value'>No Bounds</label>
+                    </div>
+
+                    <button id='start-button' class='item-value'>Start</button>
+                </div>
+
+                <div id='end-menu' class='game-menu'>
+                    <label id='new-best-label'></label>
+                    
+                    <div class='menu-item'>
+                        <label class='item-label'>Final Score: </label><br>
+                        <label id='final-score-label'>0</label><br>
+                        <label class='item-value'>Best Score: <span id='best-score-label'>0</span></label>
+                    </div>
+
+                    <button id='restart-button' class='item-value'>Play Again</button>
+                    <br>
+                    <button id='end-button' class='item-value'>Settings</button>
+                </div>
+            </section>
+
+            <section id='game-stats'>
+                <div class='stat'>
+                    <h3>Score</h3>
+                    <p id='game-score'>0</p>
+                </div>
+                <div class='stat'>
+                    <h3>Best</h3>
+                    <p id='game-best'>0</p>
+                </div>
+                <div id='speed-mod' class='stat'>
+                    <h3>Speed</h3>
+                    <p id='speed-mod-label'>UP</p>
+                </div>
+                <div id='active-pup' class='stat'>
+                    <p id='pup-length'>0</p>
+                </div>
+                <div id='gameover-label'>GAME OVER</div>
+            </section>
+        </div>
+    </body>
+</html>
