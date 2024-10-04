@@ -22,13 +22,14 @@ body {
     display: grid;
     border: 5px solid black;
     width: 650px;
-    height: 650px;
+    height: 750px;
 }
 
 #game-board {
     display: grid;
     grid-row: 1;
     grid-column: 1;
+    height: 650px;
 }
 
 #new-best-label {
