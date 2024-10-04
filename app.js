@@ -265,8 +265,6 @@ function StartGame () {
     // Start game loop
     gameState.currentGame = setInterval(UpdateGame, gameState.gameSpeed);
     setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 500 );
-   
-
 }
 
 // Main loop of the current game
