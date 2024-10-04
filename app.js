@@ -242,9 +242,9 @@ function ResetGame () {
 function StartGame () {
     // Before even that! See if there is a game currently started
     if (gameState.currentGame !== null) return;
-
+    
     SetGameOptions();
-
+    
     // Create/apply styling for game board grid
     const cellGridArea = `repeat(${gameState.cellCount},1fr)`;
     const gridStyle = {
@@ -264,6 +264,9 @@ function StartGame () {
 
     // Start game loop
     gameState.currentGame = setInterval(UpdateGame, gameState.gameSpeed);
+    setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 500 );
+   
+
 }
 
 // Main loop of the current game
